@@ -57,6 +57,9 @@
 									  <button class="nav-link w-100 px-1 my-1 active" id="pills-idea-tab" data-bs-toggle="pill" data-bs-target="#pills-idea" type="button" role="tab" aria-controls="pills-idea" aria-selected="true">The Idea</button>
 									</li>
 									<li class="nav-item col-12 col-md-2" role="presentation">
+										<button class="nav-link w-100 px-1 my-1" id="pills-leveldesign-tab" data-bs-toggle="pill" data-bs-target="#pills-leveldesign" type="button" role="tab" aria-controls="pills-leveldesign" aria-selected="true">Level Design</button>
+									  </li>
+									<li class="nav-item col-12 col-md-2" role="presentation">
 									  <button class="nav-link w-100 px-1 my-1" id="pills-process-tab" data-bs-toggle="pill" data-bs-target="#pills-process" type="button" role="tab" aria-controls="pills-process" aria-selected="false">Initial Process</button>
 									</li>
 									<li class="nav-item col-12 col-md-2" role="presentation">
@@ -68,9 +71,9 @@
 									<li class="nav-item col-12 col-md-2" role="presentation">
 										<button class="nav-link w-100 px-1 my-1" id="pills-growth-tab" data-bs-toggle="pill" data-bs-target="#pills-growth" type="button" role="tab" aria-controls="pills-growth" aria-selected="false">Personal Growth</button>
 									</li>
-									<li class="nav-item col-12 col-md-2" role="presentation">
+									<!-- <li class="nav-item col-12 col-md-2" role="presentation">
 										<button class="nav-link w-100 px-1 my-1" id="pills-result-tab" data-bs-toggle="pill" data-bs-target="#pills-result" type="button" role="tab" aria-controls="pills-result" aria-selected="false">End Result</button>
-									</li>
+									</li> -->
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
 									<div class="tab-pane fade show active" id="pills-idea" role="tabpanel" aria-labelledby="pills-idea-tab">
@@ -104,6 +107,127 @@
 											The player would take the role of Tama, a spirit with no memory of their life or death, in a quest to seek closure about their life. 
 											They require energy to use the items because they are not really meant to be tethered to this world.
 										</p>
+									</div>
+									<div class="tab-pane fade" id="pills-leveldesign" role="tabpanel" aria-labelledby="pills-leveldesign-tab">
+										<h3>
+											Important Notes for Level Design
+										</h3>
+										<p>
+											Hour of Yokai is a Puzzle Game, so part of the experience is to make the player feel smart. 
+											For that to be possible it is important to start with smaller and simpler puzzles for the player to understand the rules of the game. <br>
+											During the game the player can find the following obstacles:
+										</p>
+										<ul>
+											<li>
+												Spiritual Obstacles, such as bridges and rocks that are still on the Spiritual Plane. They don't collide with other obstacles and are not affected by gravity.
+											</li>
+											<li>
+												Wind gusts that push the Player and Spiritual Obstacles away
+											</li>
+											<li>
+												Material Obstacles that collide with the player and other obstacles and are affected by gravity. These obstacles can also be cracked so they will break if something impacts it
+											</li>
+										</ul>
+										<h3>
+											Player Mechanics
+										</h3>
+										<p>
+											The game is composed of one tutorial level and the player has access to two powers during the entire game. They are:
+										</p>
+										<ul>
+											<li>
+												The can transform Spiritual Obstacles into real ones, which allows them to collide with the player.
+											</li>
+											<li>
+												They can transform themselves into a Rock Version of Tama, which allows them to resist wind.
+											</li>
+										</ul>
+										<p>
+											The first Power is available from the start of the game while the second one is only available to the player after the middle part of the level.
+											This decision is meant to not overwhelm the player with too many possibilities right at the start of the game.
+										</p>
+										<h3>
+											Teaching these mechanics to the player
+										</h3>
+										<p>
+											The goal for the initial puzzles was to teach these mechanics to the player one by one. The player must overcome the following simple puzzles in order to advance.
+										</p>
+										<div class="row">
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/Puzzle01.png" alt="Diagram for the first puzzle">
+												<p>
+													The first puzzle is one Spiritual Bridge that the player must transform into a Material Bridge. 
+													There is a gap in the middle of the room and the player falls into it if they try to cross the spiritual bridge. <br>
+													Using their first power the player can turn the Spiritual Bridge into a Material one and cross the gap
+												</p>
+											</div>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/Puzzle02.png" alt="Diagram for the second puzzle">
+												<p>
+													Similar to the first one, the second puzzle features a Spiritual Bridge that must be turned into a material one by the player. <br>
+													The difference here is that the bridge is suspended in the air, showing that Spiritual Obstacles float and Material ones will fall to the ground.
+												</p>
+											</div>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/Puzzle03.png" alt="Diagram for the third puzzle">
+												<p>
+													The goal for this puzzle is to teach the player about how Wind mechanics work.
+													There is a narrow path that takes the player from one part of the room to another, but wind is constantly blowing there.
+													If the player tries to cross it, they will be pushed to the side. <br>
+													There is also a Spiritual Boulder above the wind. If the player turns it into a Material one, it will block the wind, allowing them to pass.
+												</p>
+											</div>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/Puzzle04.png" alt="Diagram for the fourth puzzle">
+												<p>
+													This is the last puzzle for the early tutorial moment that aims to teach the player about the different mechanics. <br>
+													It features a narrow path with a Cracked Boulder in the middle. The boulder blocks the path and there is also wind blowing against it. <br>
+													The player can turn a Spiritual Boulder that floats above the Cracked one into a Material Boulder. As it falls, both will break on impact, clearing the way. <br>
+													However, the player is pushed out of the narrow path by the wind and falls from it, so they must seek a different path to reach the end of the tutorial.
+												</p>
+											</div>
+
+											<h3>
+												The remaining level
+											</h3>
+											<p>
+												The rest of the level presents other puzzles mixed in with Story Beats to create the sense of a journey that the player is going through.
+											</p>
+											<p>
+												We combine the previous elements into new puzzles for the player, making them more complex as they go. These combinations can be:
+											</p>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/Puzzle05.png" alt="Diagram for the fifth puzzle">
+												<p>
+													Wind pushing the player from one narrow path into another and the player using a Material Boulder to block them from overshooting the second path. <br>
+													This combination of elements can be rearranged across the level and can be even further combined with other pieces in order to increase complexity.
+												</p>
+											</div>
+											<p>
+												The entire tutorial level design followed the same pattern of introducing a concept to the player and then working it into different scenarios. 
+                                                As the player moves through the level, the complexity of each puzzle increases, but so does their mastery of the mechanics of the game.
+											</p>
+											<h3>
+												Full map breakdown
+											</h3>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/TutorialMapFull.png" alt="Full Tutorial Map">
+											</div>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/TutorialMapFull_PlayerPath.png" alt="Player Path">
+												<p>
+													This is the path that the player will take throughtout the tutorial until the end.
+												</p>
+											</div>
+											<div class="col-12">
+												<img class="w-100" src="images/HoY/TutorialMapFull_RoomProgression.png" alt="Room progression">
+												<p>
+													This shows the moments in the Tutorial level in which the player is expected to deal with only Story and NPC dialogue in contrast with the puzzle sections of the game. <br>
+													We try to have some puzzle sections close together and then break it up with a small pause for story and NPC dialogue.
+												</p>
+											</div>
+										</div>
+
 									</div>
 									<div class="tab-pane fade" id="pills-process" role="tabpanel" aria-labelledby="pills-process-tab">
 										<!-- Initial Design Process -->
