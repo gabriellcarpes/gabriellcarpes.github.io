@@ -4490,9 +4490,9 @@ input, select, textarea {
 		display: none;
 		position: fixed;
 		top: 0.75rem;
-		right: 0.75rem;
+		right: 1.5rem;
 		border: 0;
-		color: #ffffff;
+		color: black;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.9rem;
 		font-weight: 900;
@@ -4512,6 +4512,7 @@ input, select, textarea {
 			line-height: 1;
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
+			color: black;
 			font-weight: 900;
 		}
 
