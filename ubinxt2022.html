@@ -53,8 +53,13 @@
 								
 								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 									<li class="nav-item" role="presentation">
+									  <button class="nav-link active" id="pills-links-tab" data-bs-toggle="pill" data-bs-target="#pills-links" type="button" role="tab" aria-controls="pills-links" aria-selected="true">
+										  <h3>Links and Video</h3>
+									  </button>
+									</li>
+									<li class="nav-item" role="presentation">
 										<!-- 2d map process button -->
-									  <button class="nav-link active" id="pills-process-tab" data-bs-toggle="pill" data-bs-target="#pills-process" type="button" role="tab" aria-controls="pills-process" aria-selected="true">
+									  <button class="nav-link" id="pills-process-tab" data-bs-toggle="pill" data-bs-target="#pills-process" type="button" role="tab" aria-controls="pills-process" aria-selected="false">
 											<h3 id="designprocess">The process</h3>
 									  </button>
 									</li>
@@ -64,16 +69,41 @@
 										  <h3>Playable Blockmesh</h3>
 									  </button>
 									</li>
-									<li class="nav-item" role="presentation">
-									  <button class="nav-link" id="pills-links-tab" data-bs-toggle="pill" data-bs-target="#pills-links" type="button" role="tab" aria-controls="pills-links" aria-selected="false">
-										  <h3>Links and Video</h3>
-									  </button>
-									</li>
 								  </ul>
 
 								  <div class="tab-content" id="pills-tabContent">
+									<!-- Docs Links and Video -->
+									<div class="tab-pane fade show active" id="pills-links" role="tabpanel" aria-labelledby="pills-links-tab">
+										<div class="align-center">
+											<h3>Video of the Golden Path for the Level</h3>
+											<iframe width="951" height="535" src="https://www.youtube.com/embed/Bu4ScsLlb3o" title="Gabriel Carpes - Ubisoft NXT - Golden Path" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+										<div class="align-center">
+											<h5>
+												<a target="_blank" href="https://www.youtube.com/watch?v=9cYt3OkSu-M">Ubsifot NXT 2022 Finalists</a>
+											</h5>
+										</div>
+
+										<ul>
+											<li> <a target="_blank" href="pdfs/2DMAP_MissionBrief.pdf">
+													Full 2D map Mission Design Document
+												</a>
+											</li>
+											<li>
+												<a target="_blank" href="pdfs/Full_Changelist.pdf">
+													Changelist between 2D map and Playable Blockmesh
+												</a>
+											</li>
+											<li>
+												<a target="_blank" href="https://drive.google.com/file/d/1ksXr337h06YLYTG2JeeRlBrCpr1YGbfU/view?usp=sharing">
+													Download and play the Blockmesh
+												</a>
+											</li>
+										</ul>
+
+									</div>
 									  <!-- 2d map process text -->
-									<div class="tab-pane fade show active" id="pills-process" role="tabpanel" aria-labelledby="pills-process-tab">
+									<div class="tab-pane fade" id="pills-process" role="tabpanel" aria-labelledby="pills-process-tab">
 										<header>
 											<h2>Desiging the 2D map</h2>
 											<p>The following text focuses on the design process for the 2D map. If you'd just like to see the end result click <a target="_blank" href="pdfs/2DMAP_MissionBrief.pdf">here</a></p>
@@ -144,6 +174,10 @@
 											<h2 id="playablemesh">Implementing In UE5</h2>
 											<p>Below is a description of the process to implement the playable blockmesh. If you're interested in the full changelist between 2D map and Blockmesh click <a target="_blank" href="pdfs/Full_Changelist.pdf">here</a></p>
 										</header>
+
+										<div class="col-12 d-block">
+											<img class="w-100" src="images/playable_blockmesh.png" alt="Screenshot of the playable blockmesh">
+										</div>
 										<p>
 											After finishing up the 2D map I started by assembling the playable blockmesh in Unreal 5 based on a package provided by Ubisoft. 
 											The package contained blueprints for gameplay as well as AI Actors. At this stage new limitations were added to the project:
@@ -166,62 +200,108 @@
 										</ul>
 										<!-- The importance of the Start -->
 										<h3>The importance of the start</h3>
-										<p>
-											When we are designing a level or a gameplay element, it is easy to forget that the player does not know any of our thought processes and that we won't be there to explain anything to them. 
-											We have to use the first moments of gameplay to teach things to them. This may be obvious to more experienced designers, but it was something that I reinforced while implementing the level in the engine.
-										</p>
-										<p>
-											On my 2D map, I had a very large open area where the player started, with some guards directly in front of them. 
-											In the engine, that proved to be too open-ended and the player might feel lost.
-										</p>
-										<p>
-											This was one of my first learning opportunities with this project. 
-											At first, I was afraid of creating narrow corridors and situations that felt too obvious, but those are often a very good addition at the start of a level. 
-											Similar to a cold opening of a TV show that tries to hook the audience, those first few seconds of gameplay are crucial and I couldn't afford to lose the player by being mysterious with what I wanted them to do.
-											I had to figure out what I need to show to the player at first and how to show it. Those were two simple things.
-										</p>
-										<ul>
-											<li>I needed them to view and understand the level goals.</li>
-											<li>I wanted them to view the first vantage point, and get a feel for what challenges lie ahead of them.</li>
-										</ul>
-										<p>There was also a "wow" factor that I wanted the player to have when they first entered the level. 
-											This is a small trick that I learned from architecture school, if you make the viewer (in this case the player) go through a narrow space and then arrive at an open space, the open space will be more impactful.
-											Louis Kahn's Yale Center for British Art in New Hampshire is an example of this. The entrance is a small nook on the corner of this massively rectangular building, but once you enter you encounter a large lobby with a beautiful skylight at the top. The impact of the lobby is delivered by the narrowness of the entrance.
-										</p>
-										<div class="image main">
-											<img src="images/Louis_Khan_building.jpg" alt="Yale Center for British Art Building" />
-											<p> <i>Louis Kahn's Yale Center for British Art. The entrance is in the corner of the building</i> </p>
+
+										<div class="row">
+											<div class="col-12 col-md-6 d-block">
+												<img class="w-100" src="images/level_start_and_tutorial.png" alt="Elements Present on the level start">
+												<p>
+													<i>Elements of the first area of the level</i>
+												</p>
+											</div>
+											<div class="col-12 col-md-6 d-block">
+												<img class="w-100" src="images/level_start_and_tutorial_paths.png" alt="Elements Present on the level start">
+												<p>
+													<i>Guart Paths and Possible Player Paths</i>
+												</p>
+											</div>
+											<div class="col-12">
+												<p>
+													The first area of the map features four major features:
+												</p>
+												<ul>
+													<li>
+														A Vantage Point, where the player can see the Main House.
+													</li>
+													<li>
+														A Tutorial laser trap.
+													</li>
+													<li>
+														A simple stealth encounter.
+													</li>
+													<li>
+														A second Vantage Point, where the player can see the security lodge.
+													</li>
+												</ul>
+											</div>
 										</div>
-										<div class="image main">
-											<img src="images/Louis_Khan_Lobby.jpg" alt="Yale Center for British Art Lobby" />
-											<p> <i>The lobby of the building, with it's beautiful skylight, has it's grandeur enhanced because the user went throught the small entrance.</i> </p>
+										<div class="row">
+											<h4>The Tutorial Laser Trap</h4>
+											<div>
+												<img class="w-100" src="images/level_start_lasertrap.png" alt="Elements of the Initial Laser Trap">
+											</div>
+											<p>
+												The setup for the firt laser trap has the following elements:
+											</p>
+											<ul>
+												<li>
+													A document, explaining that the nearby guard set up this trap.
+												</li>
+												<li>
+													A power source, facing the player. This can be used to turn off the trap.
+												</li>
+												<li>
+													A cover area. In case the player triggers the trap they can then hide from the incoming guard.
+												</li>
+											</ul>
+											<p>
+												Laser traps are reused on later sections of the level to provide extra challenge with the limited AI.
+											</p>
 										</div>
-										<p>I may not be Louis Kahn, but I can learn from him and apply it to game design. I started by losing my fear of corridors and making it very obvious to the player where they should head on first.
-											The player will start in a "corridor" created by the landscape itself. Right in front of them is the first object "Read Mission Brief". This gives the backstory and the other mission goals for the player.
-											In a full game, those could be delivered prior to the level, or via cutscene. In this scenario this could also be a dead drop that the player has to retrieve to understand what they are doing, which adds to the secrecy of it all.
-										</p>
-										<div class="image main">
-											<img src="images/First_screen.png" alt="First screen of the entire level" />
-											<p> <i>What the player sees when they start the level. Just a straight path</i> </p>
+										<div class="row">
+											<h4>
+												The first Stealth Encounter
+											</h4>
+											<div class="row">
+												<div class="col-12 col-md-6">
+													<img class="w-100" src="images/level_start_stealthencounter01.png" alt="Stealth Encounter Elements">
+												</div>
+												<div class="col-12 col-md-6">
+													<img class="w-100" src="images/level_start_stealthencounter02.png" alt="Stealth Encounter Elements">
+												</div>
+											</div>
+											<p>
+												For the first Stealth encounter of the level, the setup has:
+											</p>
+											<ul>
+												<li>
+													A Guard with a simple path, going in and out of a house.
+												</li>
+												<li>
+													A stealth path that takes the player to the back of the house.
+												</li>
+												<li>
+													A window, from which the player can see what is inside the house.
+												</li>
+												<li>
+													A stealth entrance to the house.
+												</li>
+											</ul>
+											<p>
+												With this simple encounter, the player is now aware of an area having multiple entrances, stealth entrances throughout the level and the idea of using cover to hide themselves from guards as they patrol.
+												All of these ideas are used throughout the level.
+											</p>
+
 										</div>
-										<p>
-											Right after completing the first objective, the player can see their first Vantage Point which shows the Main House, the location of both Johan Peters, and the Secret Documents. 
-											Cameras, lights, and patrol paths are visible from this point, giving the player a taste of what they're about to face.
-										</p>
-										<div class="image main">
-											<img src="images/First_Vantage_Point.png" alt="First screen of the entire level" />
-											<p> <i>The vantage Point of the main House, which shows the player the challenges that they will face.</i> </p>
-										</div>
-		
+
 										<h3>Laser Traps, a helpful aid for the AI</h3>
 		
 										<p>The AI for the blockmesh was limited. They could kill the player with only one hit, but they had only a melee attack and there was a limit of 12 for the entire level. 
-											The player can disable them by pressing E behind their backs only with a melee attack as well. This was a tricky situation to get around due to the nature of stealth games. 
+											The player can disable them by pressing E behind their backs only with a melee attack as well. 
 											One AI can prove to be very very simple for the player to get around, but two guards patrolling the same area is a very large jump in difficulty.
 										</p>
 										<p>
-											This happens because of the fantasy that stealth games sell. The player wants to feel cool by not being detected and evading guards or taking them out silently, 
-											if it was a simple FPS, adding just one additional guard would not be such a large increase in difficulty because the goal is to defeat as many enemies as possible in that scenario.
+											For stealth games, the player wants to feel cool by not being detected and evading guards or taking them out silently, 
+											if it was a simple FPS, adding just one additional guard would not be such a large increase in difficulty.
 										</p>
 										<p>
 											We were provided with a Laser Trap from Ubisoft, which triggers an alarm once the player moves through it. 
@@ -247,7 +327,7 @@
 											I created the concept of a "mobile laser trap" a new security feature that was being implemented by Johan's security team. 
 											Once fully set up, they would run on independent power sources and the player would have no way of turning them off.
 											Creating this was a simple matter of organizing and implementing the elements that were already given to us in a specific way. 
-											I also created this small encounter to teach this concept to the player.
+											The tutorial laser encounter was set up to teach about these mechanics.
 										</p>
 										<div class="image main">
 											<img src="images/laser_trap_01.png" alt="First Laser Trap" />
@@ -271,7 +351,59 @@
 											<img src="images/laser_trap_02_hiding.png" alt="Laser trap encounter with extra lasers and one guard" />
 											<p> <i>Hiding from the guard patrolling the area.</i> </p>
 										</div>
-		
+
+										<h4>
+											Lessons Learned
+										</h4>
+										<p>
+											When we are designing a level or a gameplay element, it is easy to forget that the player does not know any of our thought processes and that we won't be there to explain anything to them. 
+											We have to use the first moments of gameplay to teach things to them. This may be obvious to more experienced designers, but it was something that I reinforced while implementing the level in the engine.
+										</p>
+										<p>
+											On my 2D map, I had a very large open area where the player started, with some guards directly in front of them. 
+											In the engine, that proved to be too open-ended and the player might feel lost.
+										</p>
+										<p>
+											This was one of my first learning opportunities with this project. 
+											At first, I was afraid of creating narrow corridors and situations that felt too obvious, but those are often a very good addition at the start of a level. 
+											Similar to a cold opening of a TV show that tries to hook the audience, those first few seconds of gameplay are crucial and I couldn't afford to lose the player by being mysterious with what I wanted them to do.
+											I had to figure out what I need to show to the player at first and how to show it. Those were two simple things.
+										</p>
+										<ul>
+											<li>I needed them to view and understand the level goals.</li>
+											<li>I wanted them to view the first vantage point, and get a feel for what challenges lie ahead of them.</li>
+										</ul>
+										<p>There was also a "wow" factor that I wanted the player to have when they first entered the level. 
+											This is a small trick that I learned from architecture school, if you make the viewer (in this case the player) go through a narrow space and then arrive at an open space, the open space will be more impactful.
+											Louis Kahn's Yale Center for British Art in New Hampshire is an example of this. The entrance is a small nook on the corner of this massively rectangular building, but once you enter you encounter a large lobby with a beautiful skylight at the top. The impact of the lobby is delivered by the narrowness of the entrance.
+										</p>
+										<div class="image d-flex row">
+											<div class="col-12 col-md-6">
+												<img class="w-100" src="images/Louis_Khan_building.jpg" alt="Yale Center for British Art Building" />
+												<p> <i>Louis Kahn's Yale Center for British Art. The entrance is in the corner of the building</i> </p>
+											</div>
+											<div class="col-12 col-md-6">
+												<img class="w-100" src="images/Louis_Khan_Lobby.jpg" alt="Yale Center for British Art Lobby" />
+												<p> <i>The lobby of the building, with it's beautiful skylight, has it's grandeur enhanced because the user went throught the small entrance.</i> </p>
+											</div>
+										</div>
+										<p>I may not be Louis Kahn, but I can learn from him and apply it to game design. I started by losing my fear of corridors and making it very obvious to the player where they should head on first.
+											The player will start in a "corridor" created by the landscape itself. Right in front of them is the first object "Read Mission Brief". This gives the backstory and the other mission goals for the player.
+											In a full game, those could be delivered prior to the level, or via cutscene. In this scenario this could also be a dead drop that the player has to retrieve to understand what they are doing, which adds to the secrecy of it all.
+										</p>
+										<div class="image main">
+											<img src="images/First_screen.png" alt="First screen of the entire level" />
+											<p> <i>What the player sees when they start the level. Just a straight path</i> </p>
+										</div>
+										<p>
+											Right after completing the first objective, the player can see their first Vantage Point which shows the Main House, the location of both Johan Peters, and the Secret Documents. 
+											Cameras, lights, and patrol paths are visible from this point, giving the player a taste of what they're about to face.
+										</p>
+										<div class="image main">
+											<img src="images/First_Vantage_Point.png" alt="First screen of the entire level" />
+											<p> <i>The vantage Point of the main House, which shows the player the challenges that they will face.</i> </p>
+										</div>
+
 										<h3>The end result for the map:</h3>
 		
 										<div class="image main"><img src="images/In_Engine_map.jpg" alt="How the map looks in engine" /></div>
@@ -295,37 +427,7 @@
 											<li>Several improvements to the Guard AI and how it handles player position and alarms. I even added the ability to "group" them via tags so all guards with the same tag can share the same status.</li>
 										</ul>
 										<p>A full list of blueprint and scripting changes is present in the  <a target="_blank" href="pdfs/Full_Changelist.pdf">Changelist Document</a></p>
-									</div>
-									<!-- Docs Links and Video -->
-									<div class="tab-pane fade" id="pills-links" role="tabpanel" aria-labelledby="pills-links-tab">
-										<div class="align-center">
-											<h3>Video of the Golden Path for the Level</h3>
-											<iframe width="951" height="535" src="https://www.youtube.com/embed/Bu4ScsLlb3o" title="Gabriel Carpes - Ubisoft NXT - Golden Path" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										</div>
-										<div class="align-center">
-											<h5>
-												<a target="_blank" href="https://www.youtube.com/watch?v=9cYt3OkSu-M">Ubsifot NXT 2022 Finalists</a>
-											</h5>
-										</div>
-
-										<ul>
-											<li> <a target="_blank" href="pdfs/2DMAP_MissionBrief.pdf">
-													Full 2D map Mission Design Document
-												</a>
-											</li>
-											<li>
-												<a target="_blank" href="pdfs/Full_Changelist.pdf">
-													Changelist between 2D map and Playable Blockmesh
-												</a>
-											</li>
-											<li>
-												<a target="_blank" href="https://drive.google.com/file/d/1ksXr337h06YLYTG2JeeRlBrCpr1YGbfU/view?usp=sharing">
-													Download and play the Blockmesh
-												</a>
-											</li>
-										</ul>
-
-									</div>
+									</div>									
 								  </div>
 								<header>
 							</section>
@@ -362,6 +464,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 	</body>
 </html>
