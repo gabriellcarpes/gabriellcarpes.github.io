@@ -55,11 +55,11 @@
 
 								<ul class="nav nav-pills mb-3 p-0 text-center flex-column flex-md-row" id="pills-tab" role="tablist">
 									<li class="nav-item col-12 col-md-2" role="presentation">
-									  <button class="nav-link w-100 px-1 my-1 active" id="pills-idea-tab" data-bs-toggle="pill" data-bs-target="#pills-idea" type="button" role="tab" aria-controls="pills-idea" aria-selected="true">The Idea</button>
+										<button class="nav-link w-100 px-1 my-1 active" id="pills-leveldesign-tab" data-bs-toggle="pill" data-bs-target="#pills-leveldesign" type="button" role="tab" aria-controls="pills-leveldesign" aria-selected="true">Level Design</button>
 									</li>
 									<li class="nav-item col-12 col-md-2" role="presentation">
-										<button class="nav-link w-100 px-1 my-1" id="pills-leveldesign-tab" data-bs-toggle="pill" data-bs-target="#pills-leveldesign" type="button" role="tab" aria-controls="pills-leveldesign" aria-selected="true">Level Design</button>
-									  </li>
+									  <button class="nav-link w-100 px-1 my-1" id="pills-idea-tab" data-bs-toggle="pill" data-bs-target="#pills-idea" type="button" role="tab" aria-controls="pills-idea" aria-selected="true">The Idea</button>
+									</li>
 									<li class="nav-item col-12 col-md-2" role="presentation">
 									  <button class="nav-link w-100 px-1 my-1" id="pills-process-tab" data-bs-toggle="pill" data-bs-target="#pills-process" type="button" role="tab" aria-controls="pills-process" aria-selected="false">Initial Process</button>
 									</li>
@@ -69,15 +69,15 @@
 									<li class="nav-item col-12 col-md-2" role="presentation">
 										<button class="nav-link w-100 px-1 my-1" id="pills-heuristics-tab" data-bs-toggle="pill" data-bs-target="#pills-heuristics" type="button" role="tab" aria-controls="pills-heuristics" aria-selected="false">Heuristics</button>
 									</li>
-									<li class="nav-item col-12 col-md-2" role="presentation">
+									<!-- <li class="nav-item col-12 col-md-2" role="presentation">
 										<button class="nav-link w-100 px-1 my-1" id="pills-growth-tab" data-bs-toggle="pill" data-bs-target="#pills-growth" type="button" role="tab" aria-controls="pills-growth" aria-selected="false">Personal Growth</button>
-									</li>
+									</li> -->
 									<!-- <li class="nav-item col-12 col-md-2" role="presentation">
 										<button class="nav-link w-100 px-1 my-1" id="pills-result-tab" data-bs-toggle="pill" data-bs-target="#pills-result" type="button" role="tab" aria-controls="pills-result" aria-selected="false">End Result</button>
 									</li> -->
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
-									<div class="tab-pane fade show active" id="pills-idea" role="tabpanel" aria-labelledby="pills-idea-tab">
+									<div class="tab-pane fade" id="pills-idea" role="tabpanel" aria-labelledby="pills-idea-tab">
 										<!-- How we came up with the idea -->
 										<header>
 											<h2>Coming up with the idea</h2>
@@ -109,7 +109,26 @@
 											They require energy to use the items because they are not really meant to be tethered to this world.
 										</p>
 									</div>
-									<div class="tab-pane fade" id="pills-leveldesign" role="tabpanel" aria-labelledby="pills-leveldesign-tab">
+									<div class="tab-pane fade show active" id="pills-leveldesign" role="tabpanel" aria-labelledby="pills-leveldesign-tab">
+										<h3>
+											Full map breakdown
+										</h3>
+										<div class="col-12">
+											<img class="w-100" src="images/HoY/TutorialMapFull.png" alt="Full Tutorial Map">
+										</div>
+										<div class="col-12">
+											<img class="w-100" src="images/HoY/TutorialMapFull_PlayerPath.png" alt="Player Path">
+											<p>
+												This is the path that the player will take throughtout the tutorial until the end.
+											</p>
+										</div>
+										<div class="col-12">
+											<img class="w-100" src="images/HoY/TutorialMapFull_RoomProgression.png" alt="Room progression">
+											<p>
+												This shows the moments in the Tutorial level in which the player is expected to deal with only Story and NPC dialogue in contrast with the puzzle sections of the game. <br>
+												We try to have some puzzle sections close together and then break it up with a small pause for story and NPC dialogue.
+											</p>
+										</div>
 										<h3>
 											Important Notes for Level Design
 										</h3>
@@ -150,10 +169,27 @@
 										<h3>
 											Teaching these mechanics to the player
 										</h3>
-										<p>
-											The goal for the initial puzzles was to teach these mechanics to the player one by one. The player must overcome the following simple puzzles in order to advance.
-										</p>
 										<div class="row">
+											<p>
+												The goal for the initial puzzles was to teach these mechanics to the player one by one. <br>
+												Another important aspect was the Wind obstacle and how it relates to the player not being able to overcome it straight away.
+												Instead of just dropping the Wind obstacle on the player at the same time that they gain the means to beat it, we placed it earlier on the level, forcing the player go suffer with it. <br>
+												This meant that when the player got the ability to resist Wind, it would have a larger impact for them. The starter progression for it is as follows:
+											</p>
+											<div class="col-12">
+												<img class="w-100 my-3" src="images/HoY/PuzzleProgress.png" alt="Four first puzzles">
+												<p>
+													Initial 4 puzzle progression. We add a "Gate" on the fourth puzzle in the form of a Wind obstacle. The player must go through another path to beat the level. <br>
+													Later they wil reencounter the same obstacle but with a way to get past it.
+												</p>
+											</div>
+
+											<div class="col-12">
+												<img class="w-100 my-3" src="images/HoY/Gate_On_The_Map.png" alt="Gate position on the map">
+												<p>
+													The position of the gate on the tutorial map
+												</p>
+											</div>
 											<div class="col-12">
 												<img class="w-100" src="images/HoY/Puzzle01.png" alt="Diagram for the first puzzle">
 												<p>
@@ -208,25 +244,6 @@
 												The entire tutorial level design followed the same pattern of introducing a concept to the player and then working it into different scenarios. 
                                                 As the player moves through the level, the complexity of each puzzle increases, but so does their mastery of the mechanics of the game.
 											</p>
-											<h3>
-												Full map breakdown
-											</h3>
-											<div class="col-12">
-												<img class="w-100" src="images/HoY/TutorialMapFull.png" alt="Full Tutorial Map">
-											</div>
-											<div class="col-12">
-												<img class="w-100" src="images/HoY/TutorialMapFull_PlayerPath.png" alt="Player Path">
-												<p>
-													This is the path that the player will take throughtout the tutorial until the end.
-												</p>
-											</div>
-											<div class="col-12">
-												<img class="w-100" src="images/HoY/TutorialMapFull_RoomProgression.png" alt="Room progression">
-												<p>
-													This shows the moments in the Tutorial level in which the player is expected to deal with only Story and NPC dialogue in contrast with the puzzle sections of the game. <br>
-													We try to have some puzzle sections close together and then break it up with a small pause for story and NPC dialogue.
-												</p>
-											</div>
 										</div>
 									</div>
 									<div class="tab-pane fade" id="pills-process" role="tabpanel" aria-labelledby="pills-process-tab">
