@@ -23,7 +23,7 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="ubinxt2022.html">Ubisoft NXT 2021</a></li>
 							<li><a href="hourofyokai.html">Hour of Yokai</a></li>
-							<li class="active"><a href="demakehotlinemiami.html">Game Demake: Hotline Miami</a></li>
+							<li class="active"><a href="demakehotlinemiami.html">Blog: Demaking Hotline Miami</a></li>
 							<li><a href="resume.html">Resume</a></li>
 							<li><a href="about.html">About</a></li>
 						</ul>
@@ -163,6 +163,14 @@
 											<i>Because of the Mouse and Screen, or even double thumbsticks, the player can turn the character in any direction and provide walking input in a different direction at the same time</i>
 										</p>
 									</div>
+									<div class="col-12 mb-3">
+										<p class="mt-0">
+											This means that in practice, a player can attack an enemy that is not on the same Y or X axis as they are. As they rotate the mouse to the right 
+											the Character would rotate in place, allowing them to aim at the enemy.
+										</p>
+										<img class="w-100" src="images/HotlineMiami/mouse_aim_01.png" alt="Mouse Aim Diagram 01">
+										<img class="w-100" src="images/HotlineMiami/mouse_aim_02.png" alt="Mouse Aim Diagram 02">
+									</div>
 									<p>
 										A solution to this problem would be to eliminate the 360 angle and use just the 4 main axis of movement. 
 										So the player can move/shoot in these four directions: Up, Down, Left Right. 
@@ -174,14 +182,28 @@
 											<i>For the NES, a better strategy would be to lock the player in the 4 main axis</i>
 										</p>
 									</div>
+									<div class="col-12 mb-3">
+										<p class="mt-0">
+											It is possible to use the left and right buttons on the NES D-Pad to rotate the character, but that type of control is slow and doesn't match with the speed of Hotline Miami.
+											A better solution is to make the character turn completely to the left or to the right as the player presses the D-Pad in those directions. 
+											This also means that the player can now only aim at enemies that are either on the same Y or the same X axis as they are.
+										</p>
+										<img class="w-100" src="images/HotlineMiami/nes_aim_01.png" alt="NES Aim Diagram 01">
+										<img class="w-100" src="images/HotlineMiami/nes_aim_02.png" alt="NES Aim Diagram 02">
+										<p>
+											<i>A simple click to the left button on the D-PAD should turn the player to the left</i>
+										</p>
+									</div>
 									<p>
 										The enemies would also need to stop attacking in diagonals, again for fairness. 
 										Locking them into the same axis as the player makes combat intuitive as everyone is following the same rules and makes their attacks easier to predict for the player.
+										<img class="w-100" src="images/HotlineMiami/nes_aim_03.png" alt="NES Aim Diagram 03">
 									</p>
 									<p>
 										Other than that, Hotline Miami only has two major actions which are Attack/Shoot and Pickup/Throw weapons. 
 										These can be easily mapped to the NES two buttons.
 									</p>
+									<!-- Melee Enemies -->
 									<h3>The Melee Enemies</h3>
 									<p>
 										Hotline Miami features a few enemies that try to attack the player with Melee weapons. 
@@ -213,6 +235,31 @@
 										If the player is still in that location, they will get hit.
 										This ensures that the player has a chance to dodge or fight back against the melee enemy with the limited controls of the NES.
 									</p>
+									<!-- Level Streaming -->
+									<h3>Level Streaming</h3>
+									<p>In Hotline Miami, as the player moves through the level, the camera follows them, slowly revealing the environment. 
+										This is another feature made possible by the high processing power of current computers. While the environment is not yet being displayed, it is being managed by the application and is occupying processing power. 
+										Which is also why players can be attacked by enemies that are off screen.
+									</p>
+									<div class="col-12">
+										<img class="w-100" src="images/HotlineMiami/Level_Stream_PC.png" alt="Level Stream Diagram for the PC">
+										<p>
+											<i>In this case, the offscreen enemy is being processed and it can attack the player. The camera is also centered on the player at all times</i>
+										</p>
+									</div>
+									<div class="col-12">
+										<p>
+											Processing Power on the NES could not be wasted like that, so changes to the camera must be made. 
+											The camera would need to show the entire section of the level, not centered on the player, with all active enemies on screen. 
+											In order to further save on processing power, levels need to be broken down into smaller parts, similar to how the first Zelda dealed with dungeon rooms.
+										</p>
+										<img class="w-100" src="images/HotlineMiami/Level_Stream_NES.png" alt="Level Stream Diagram for the NES">
+										<p>
+											<i>In this example, the camera is always seeing the entire section of the level. The active enemy is visible and the player is not centered.</i>
+										</p>
+
+									</div>
+
 									<h3>Other Considerations</h3>
 									<p>
 										Hotline Miami uses a rich palette of color filled with neon tones and other elements. 
