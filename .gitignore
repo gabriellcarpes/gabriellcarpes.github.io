@@ -1,0 +1,20 @@
+# VS Code personal settings
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# User-specific files
+.vscode/sftp.json
+.vscode/ftp-sync.json
+
+.vscode/*
+.vs/gabriellcarpes.github.io/config/applicationhost.config
+.vs/gabriellcarpes.github.io/FileContentIndex/414a8a78-5470-4c2a-b349-d3930598c128.vsidx
+.vs/gabriellcarpes.github.io/FileContentIndex/6dd1284b-5844-4ad4-b088-9946ac9c276c.vsidx
+.vs/gabriellcarpes.github.io/FileContentIndex/89db7b25-71dd-494d-8639-43d95f349eef.vsidx
+.vs/gabriellcarpes.github.io/v17/.wsuo
+.vs/gabriellcarpes.github.io/v17/DocumentLayout.json
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite-journal
